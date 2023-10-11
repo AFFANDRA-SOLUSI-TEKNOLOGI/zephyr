@@ -27,7 +27,7 @@
         :active="Str::startsWith(request()->route()->uri(), 'dummy')"
     >
         <x-slot name="icon">
-            <x-heroicon-o-view-grid class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+            <x-heroicon-o-bars-arrow-down class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
 
         @php

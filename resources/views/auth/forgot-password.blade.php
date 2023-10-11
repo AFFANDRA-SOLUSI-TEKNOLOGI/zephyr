@@ -23,7 +23,7 @@
 
                     <x-form.input-with-icon-wrapper>
                         <x-slot name="icon">
-                            <x-heroicon-o-mail aria-hidden="true" class="w-5 h-5" />
+                            <x-heroicon-o-envelope aria-hidden="true" class="w-5 h-5" />
                         </x-slot>
 
                         <x-form.input

@@ -30,7 +30,7 @@
             class="hidden w-6 h-6 lg:block"
         />
 
-        <x-heroicon-o-x
+        <x-heroicon-o-x-mark
             aria-hidden="true"
             class="w-6 h-6 lg:hidden"
         />
