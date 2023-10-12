@@ -1,1 +1,1 @@
-<h2 {{ $attributes }} class="font-bold text-2xl hover:text-zephyr-500 transition-all delay-300">Zephyr</h2>
+<h2 {{ $attributes }} class="font-bold text-2xl hover:text-zephyr-500 transition-all delay-300">{{ config('app.name') }}</h2>
