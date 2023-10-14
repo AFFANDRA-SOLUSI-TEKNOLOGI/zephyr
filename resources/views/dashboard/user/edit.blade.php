@@ -36,7 +36,7 @@
                 </x-form.input-with-icon-wrapper>
                 <x-error-text name="password" />
 
-                <x-button class="w-full justify-center mt-2">Submit</x-button>
+                <x-button class="w-full justify-center mt-2" targetForm="theForm" loadingOnSubmit>Submit</x-button>
             </div>
         </form>
 

@@ -6,7 +6,9 @@
     'size' => 'base',
     'disabled' => false,
     'pill' => false,
-    'squared' => false
+    'squared' => false,
+    'loadingOnSubmit' => false,
+    'targetForm' => ''
 ])
 
 @php
@@ -71,10 +73,27 @@
         @endif
     </a>
 @else
-    <button {{ $attributes->merge(['type' => 'submit', 'class' => $classes]) }}>
-        {{ $slot }}
-        @if($iconOnly)
-            <span class="sr-only">{{ $srText ?? '' }}</span>
-        @endif
-    </button>
+    @if ($loadingOnSubmit)
+        <button id="submit" {{ $attributes->merge(['type' => 'submit', 'class' => $classes]) }}>
+            <span id="submitLoad" class="loading loading-spinner hidden"></span>    
+            <span id="submitText" class="ml-2">{{ $slot }}</span>
+            @if($iconOnly)
+                <span class="sr-only">{{ $srText ?? '' }}</span>
+            @endif
+        </button>
+        <script>
+            document.getElementById("{{ $targetForm }}").addEventListener("submit", function(event) {
+                document.querySelector('#submit').disabled = true;
+                document.querySelector('#submit > #submitLoad').classList.remove('hidden');
+                document.querySelector('#submit > #submitText').innerHTML = 'Processing...'
+            });
+        </script>
+    @else
+        <button {{ $attributes->merge(['type' => 'submit', 'class' => $classes]) }}>
+            {{ $slot }}
+            @if($iconOnly)
+                <span class="sr-only">{{ $srText ?? '' }}</span>
+            @endif
+        </button>
+    @endif
 @endif
