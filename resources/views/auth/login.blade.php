@@ -67,7 +67,7 @@
                         <input
                             id="remember_me"
                             type="checkbox"
-                            class="text-zephyr-500 border-gray-300 rounded focus:border-zephyr-300 focus:ring focus:ring-zephyr-500 dark:border-gray-600 dark:bg-dark-eval-1 dark:focus:ring-offset-dark-eval-1"
+                            class="checkbox checkbox-sm checkbox-accent text-zephyr-500 border-gray-300 rounded focus:border-zephyr-300 focus:ring focus:ring-zephyr-500 dark:border-gray-600 dark:bg-dark-eval-1 dark:focus:ring-offset-dark-eval-1"
                             name="remember"
                         >
 
