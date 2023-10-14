@@ -87,7 +87,15 @@ final class UserTable extends PowerGridComponent
     {
         return [
             Button::make('edit', 'Edit')
-                ->class('bg-zephyr-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm inline-block')
+               ->class('bg-zephyr-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm inline-block')
+               ->route('user.edit', ['user' => $row->id])
+               ->target('_self'),
+
+           Button::make('destroy', 'Delete')
+               ->class('bg-error cursor-pointer text-white px-3 py-2 m-1 rounded text-sm inline-block')
+               ->route('user.destroy', ['user' => $row->id])
+               ->method('delete')
+               ->target('_self'),
         ];
     }
 

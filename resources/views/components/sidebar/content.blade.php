@@ -14,6 +14,16 @@
         </x-slot>
     </x-sidebar.link>
 
+    <x-sidebar.link
+        title="User"
+        href="{{ route('user.index') }}"
+        :isActive="request()->routeIs('user.*')"
+    >
+        <x-slot name="icon">
+            <x-heroicon-o-user class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+    </x-sidebar.link>
+
     <div
         x-transition
         x-show="isSidebarOpen || isSidebarHovered"
