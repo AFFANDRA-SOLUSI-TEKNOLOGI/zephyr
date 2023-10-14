@@ -2,6 +2,10 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    presets: [
+        require("./vendor/power-components/livewire-powergrid/tailwind.config.js"),
+    ],
+    
     darkMode: 'media',
 
     content: [
@@ -9,6 +13,11 @@ module.exports = {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.js',
+        './app/Http/Livewire/**/*Table.php', 
+        './vendor/power-components/livewire-powergrid/resources/views/**/*.php',
+        './vendor/power-components/livewire-powergrid/src/Themes/Tailwind.php',
+        './app/Livewire/*.php',
+        './app/PowerGridThemes/*.php'
     ],
 
     theme: {
@@ -41,5 +50,30 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    daisyui: {
+        themes: [
+            {
+                light: {
+                    ...require("daisyui/src/theming/themes")[
+                        "[data-theme=light]"
+                    ],
+                    primary: "#20ac92",
+                },
+
+                dark: {
+                    ...require("daisyui/src/theming/themes")[
+                        "[data-theme=dark]"
+                    ],
+                    primary: "#20ac92",
+                },
+            },
+        ],
+    },
+
+    plugins: [
+        require("daisyui"),
+        require('@tailwindcss/forms')({
+            strategy: 'class',
+        })
+    ],
 }
