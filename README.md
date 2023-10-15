@@ -18,6 +18,28 @@ What does Zephyr have?
 - Initial seeder of admin account.
 - Plus additional features that will be added in the future!
 
+## Installation
+
+```shell
+composer create-project affandra-solusi-teknologi/zephyr
+```
+
+After init the project you can install the node dependencies using:
+```
+npm i
+```
+
+## Getting started
+
+To start the development server:
+```shell
+php artisan serve
+```
+
+```
+npm run dev
+```
+
 ## Credit
 
 - Everyone who contributed to this project.
