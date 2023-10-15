@@ -1,6 +1,6 @@
-<center>
-    <img src="./public/zephyr.png" alt="drawing" width="200"/>
-</center>
+<div align="center">
+    <img src="./public/zephyr.png" alt="zephyr logo" width="200"/>
+</div>
 
 ## About Zephyr
 
