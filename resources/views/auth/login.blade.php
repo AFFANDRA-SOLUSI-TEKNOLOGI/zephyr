@@ -12,24 +12,39 @@
             <div class="grid gap-6">
                 <!-- Email Address -->
                 <div class="space-y-2">
-                    <x-form.label
-                        for="email"
-                        :value="__('Email')"
-                    />
+                    @php
+                        $loginByUsername = config('zephyr.login_by_username')
+                    @endphp
+
+                    @if ($loginByUsername)
+                        <x-form.label
+                            for="name"
+                            :value="__('Username')"
+                        />
+                    @else
+                        <x-form.label
+                            for="email"
+                            :value="__('Email')"
+                        />
+                    @endif
 
                     <x-form.input-with-icon-wrapper>
                         <x-slot name="icon">
-                            <x-heroicon-o-envelope aria-hidden="true" class="w-5 h-5" />
+                            @if ($loginByUsername)
+                                <x-heroicon-o-user aria-hidden="true" class="w-5 h-5" />
+                            @else
+                                <x-heroicon-o-envelope aria-hidden="true" class="w-5 h-5" />
+                            @endif
                         </x-slot>
 
                         <x-form.input
                             withicon
-                            id="email"
+                            id="{{ $loginByUsername ? 'name' : 'email' }}"
                             class="block w-full"
-                            type="email"
-                            name="email"
-                            :value="old('email')"
-                            placeholder="{{ __('Email') }}"
+                            type="{{ $loginByUsername ? 'text' : 'email' }}"
+                            name="{{ $loginByUsername ? 'name' : 'email' }}"
+                            :value="old($loginByUsername ? 'name' : 'email')"
+                            placeholder="{{ __($loginByUsername ? 'Username' : 'Email') }}"
                             required
                             autofocus
                         />
