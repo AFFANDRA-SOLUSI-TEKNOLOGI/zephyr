@@ -44,7 +44,7 @@
         </span>
     </button>
 @else
-    <a {{ $attributes->merge(['class' => $classes]) }}>
+    <x-link {{ $attributes->merge(['class' => $classes]) }}>
         @if ($icon ?? false)
             {{ $icon }}
         @else
@@ -57,5 +57,5 @@
         >
             {{ $title }}
         </span>
-    </a>
+    </x-link>
 @endif

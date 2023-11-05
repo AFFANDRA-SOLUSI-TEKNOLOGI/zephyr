@@ -66,12 +66,12 @@
 @endphp
 
 @if ($href)
-    <a href="{{ $href }}" {{ $attributes->merge(['class' => $classes]) }}>
+    <x-link href="{{ $href }}" {{ $attributes->merge(['class' => $classes]) }}>
         {{ $slot }}
         @if($iconOnly)
             <span class="sr-only">{{ $srText ?? '' }}</span>
         @endif
-    </a>
+    </x-link>
 @else
     @if ($loadingOnSubmit)
         <button id="submit" {{ $attributes->merge(['type' => 'submit', 'class' => $classes]) }}>

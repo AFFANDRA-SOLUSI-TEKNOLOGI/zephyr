@@ -7,3 +7,7 @@
 .dark .ps__rail-x {
     background-color: transparent !important;
 }
+
+#nprogress .bar {
+    background: #178a77 !important;
+}

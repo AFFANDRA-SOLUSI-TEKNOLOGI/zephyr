@@ -77,9 +77,9 @@
                     </label>
 
                     @if (Route::has('password.request'))
-                        <a class="text-sm text-blue-500 hover:underline" href="{{ route('password.request') }}">
+                        <x-link class="text-sm text-blue-500 hover:underline" href="{{ route('password.request') }}">
                             {{ __('Forgot your password?') }}
-                        </a>
+                        </x-link>
                     @endif
                 </div>
 
@@ -94,9 +94,9 @@
                 @if (Route::has('register'))
                     <p class="text-sm text-gray-600 dark:text-gray-400">
                         {{ __('Don’t have an account?') }}
-                        <a href="{{ route('register') }}" class="text-blue-500 hover:underline">
+                        <x-link href="{{ route('register') }}" class="text-blue-500 hover:underline">
                             {{ __('Register') }}
-                        </a>
+                        </x-link>
                     </p>
                 @endif
             </div>

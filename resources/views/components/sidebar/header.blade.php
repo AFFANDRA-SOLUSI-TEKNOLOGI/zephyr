@@ -1,13 +1,13 @@
 <div class="flex items-center justify-between flex-shrink-0 px-3">
     <!-- Logo -->
-    <a
+    <x-link
         href="{{ route('dashboard') }}"
         class="inline-flex items-center gap-2"
     >
         <x-application-logo />
 
         <span class="sr-only">Dashboard</span>
-    </a>
+    </x-link>
 
     <!-- Toggle button -->
     <x-button

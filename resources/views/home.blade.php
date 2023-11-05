@@ -12,7 +12,7 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             
-                            <x-button variant="danger" href="{{ route('logout') }}" class="flex gap-2" onclick="event.preventDefault(); this.closest('form').submit();">
+                            <x-button variant="danger" class="flex gap-2" onclick="event.preventDefault(); this.closest('form').submit();">
                                 <x-heroicon-o-arrow-left-on-rectangle class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
                                 <span>Logout</span>
                             </x-button>
