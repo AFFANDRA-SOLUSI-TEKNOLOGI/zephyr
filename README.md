@@ -16,6 +16,8 @@ What does Zephyr have?
 - Using PowerGrid, you can quickly create data tables.
 - Easy styling with Daisyui.
 - Initial seeder of admin account.
+- SPA-like effect using `<x-link />` component.
+- Configurable login (with username or email).
 - Plus additional features that will be added in the future!
 
 ## Installation
