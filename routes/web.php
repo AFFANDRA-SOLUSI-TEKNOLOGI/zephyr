@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::get('/user/print', [UserController::class, 'print'])->name('user.print');
     Route::resource('/user', UserController::class, ['names' => 'user']);
 });
 

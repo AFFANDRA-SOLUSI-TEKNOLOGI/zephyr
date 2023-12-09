@@ -85,4 +85,11 @@ class UserController extends Controller
         User::find($id)->delete();
         return back();
     }
+
+    /**
+     * Print all user
+     */
+    public function print() {
+        return view('print.user', ['data' => User::all()]);
+    }
 }

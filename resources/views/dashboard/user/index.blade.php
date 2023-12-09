@@ -4,7 +4,10 @@
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('User') }}
             </h2>
-            <x-button href="{{ route('user.create') }}">Add</x-button>
+            <div class="flex gap-2">
+                <x-button href="{{ route('user.print') }}">Print</x-button>
+                <x-button href="{{ route('user.create') }}">Add</x-button>
+            </div>
         </div>
     </x-slot>
 
