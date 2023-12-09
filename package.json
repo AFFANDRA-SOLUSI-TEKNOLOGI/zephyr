@@ -10,7 +10,7 @@
         "@tailwindcss/forms": "^0.5.2",
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.2",
-        "axios": "^1.1.2",
+        "axios": "^1.6.2",
         "laravel-vite-plugin": "^0.8.0",
         "perfect-scrollbar": "^1.5.5",
         "postcss": "^8.4.6",
