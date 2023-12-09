@@ -18,6 +18,7 @@ What does Zephyr have?
 - Initial seeder of admin account.
 - SPA-like effect using `<x-link />` component.
 - Configurable login (with username or email).
+- And others! find out for yourself.
 - Plus additional features that will be added in the future!
 
 ## Installation
@@ -38,9 +39,15 @@ To start the development server:
 php artisan serve
 ```
 
-```
+```shell
 npm run dev
 ```
+
+## Preview
+
+<div align="center">
+    <a href="https://iili.io/JTF11Eb.md.png"><img src="https://iili.io/JTF11Eb.md.png" alt="JTF11Eb.md.png" border="0"></a><br /><p>Dashboard Preview</p><br />
+</div>
 
 ## Credit
 
