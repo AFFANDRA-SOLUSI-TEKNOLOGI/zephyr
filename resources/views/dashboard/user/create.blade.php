@@ -24,7 +24,7 @@
                 <label class="label">
                     <span class="label-text after:content-['_*'] after:text-red-500">Password</span>
                 </label>
-                <x-form.input-with-icon-wrapper withEye>
+                <x-form.input-with-icon-wrapper withEye="password">
                     <x-form.input
                         id="password"
                         class="block w-full"
@@ -38,7 +38,7 @@
                 <label class="label">
                     <span class="label-text after:content-['_*'] after:text-red-500">Password Confirmation</span>
                 </label>
-                <x-form.input-with-icon-wrapper withEye>
+                <x-form.input-with-icon-wrapper withEye="password_confirmation">
                     <x-form.input
                         id="password_confirmation"
                         class="block w-full"

@@ -25,7 +25,7 @@
                 <label class="label">
                     <span class="label-text">Password (just leave empty if you dont want to update the pass)</span>
                 </label>
-                <x-form.input-with-icon-wrapper withEye>
+                <x-form.input-with-icon-wrapper withEye="password">
                     <x-form.input
                         id="password"
                         class="block w-full"
