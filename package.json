@@ -19,6 +19,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@tailwindcss/typography": "^0.5.10",
         "daisyui": "^3.9.2"
     }
 }

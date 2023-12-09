@@ -8,6 +8,7 @@
     </x-slot>
 
     <div class="p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-        {{ __("You're logged in!")  }}
+        <h1 class="font-semibold text-lg uppercase tracking-wide">Welcome {{ Auth::user()->name }}</h1>
+        <p class="prose">You're logged in!</p>
     </div>
 </x-app-layout>
