@@ -15,7 +15,10 @@
                 <button
                     class="flex items-center p-2 text-sm font-medium text-gray-500 rounded-md transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none focus:ring focus:ring-puerto-rico-500 focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-offset-dark-eval-1 dark:text-gray-400 dark:hover:text-gray-200"
                 >
-                    <div>{{ Auth::user()->name }}</div>
+                    <div class="flex gap-2 items-center">
+                        <img src="https://source.boringavatars.com/beam/32/{{ Auth::user()->name }}?colors=FFAD08,EDD75A,20ac92,0C8F8F,587291" class="w-8 h-8" />
+                        <div>{{ Auth::user()->name }}</div>
+                    </div>
 
                     <div class="ml-1">
                         <svg
@@ -89,7 +92,10 @@
             <button
                 class="flex items-center p-2 text-sm font-medium text-gray-500 rounded-md transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none focus:ring focus:ring-puerto-rico-500 focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-offset-dark-eval-1 dark:text-gray-400 dark:hover:text-gray-200"
             >
-                <div>{{ Auth::user()->name }}</div>
+                <div class="flex gap-2 items-center">
+                    <img src="https://source.boringavatars.com/beam/32/{{ Auth::user()->name }}?colors=FFAD08,EDD75A,20ac92,0C8F8F,587291" class="w-8 h-8" />
+                    <div>{{ Auth::user()->name }}</div>
+                </div>
 
                 <div class="ml-1">
                     <svg
