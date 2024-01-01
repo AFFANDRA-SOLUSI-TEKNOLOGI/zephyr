@@ -3,6 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "dev:conc": "concurrently -p \"[{name}]\" -n \"LARAVEL,VITE\" \"php artisan serve\" \"npm run dev\"",
         "build": "vite build"
     },
     "devDependencies": {
@@ -11,6 +12,7 @@
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.2",
         "axios": "^1.6.2",
+        "concurrently": "^8.2.2",
         "laravel-vite-plugin": "^1.0.1",
         "perfect-scrollbar": "^1.5.5",
         "postcss": "^8.4.6",
