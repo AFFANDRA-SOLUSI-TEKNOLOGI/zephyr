@@ -1,5 +1,10 @@
 <x-app-layout where="New User">
     <x-slot name="header">
+        <x-breadcrumbs includeDashboard>
+            <x-breadcrumbs.item href="{{ route('user.index') }}"><x-heroicon-o-user class="w-4 h-4 mr-1" /> User</x-breadcrumbs.item>
+            <x-breadcrumbs.item href="{{ route('user.create') }}"><x-heroicon-o-user-plus class="w-4 h-4 mr-1" /> Create</x-breadcrumbs.item>
+        </x-breadcrumbs>
+
         <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <h2 class="text-xl font-semibold leading-tight">
                 {{ __('User') }}
