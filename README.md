@@ -15,9 +15,10 @@ What does Zephyr have?
 - The website theme (light/dark) will only be consistent with the system theme.
 - Using PowerGrid, you can quickly create data tables.
 - Easy styling with Daisyui.
-- Initial seeder of admin account.
+- [Chart.js](https://www.chartjs.org/) 📈 included.
 - SPA-like effect using `<x-link />` component.
 - Configurable login (with username or email).
+- Responsive 😎.
 - And others! find out for yourself.
 - Plus additional features that will be added in the future!
 
@@ -46,7 +47,7 @@ npm run dev
 ## Preview
 
 <div align="center">
-    <a href="https://iili.io/JTF11Eb.md.png"><img src="https://iili.io/JTF11Eb.md.png" alt="JTF11Eb.md.png" border="0"></a><br /><p>Dashboard Preview</p><br />
+    <a href="https://ibb.co/R7xS0FD"><img src="https://i.ibb.co/vD7BPFj/screencapture-localhost-8000-dashboard-2024-01-02-19-06-42.png" alt="Dashboard Preview" border="0"></a><br /><p>Dashboard Preview</p><br />
 </div>
 
 ## Credit
