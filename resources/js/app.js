@@ -2,11 +2,14 @@ import './bootstrap'
 
 import collapse from '@alpinejs/collapse'
 import PerfectScrollbar from 'perfect-scrollbar'
+import Chart from 'chart.js/auto';
 
 import './../../vendor/power-components/livewire-powergrid/dist/powergrid'
 import './../../vendor/power-components/livewire-powergrid/dist/tailwind.css'
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
-window.PerfectScrollbar = PerfectScrollbar
+window.PerfectScrollbar = PerfectScrollbar;
+window.Chart = Chart;
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('mainState', () => {

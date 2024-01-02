@@ -7,13 +7,6 @@
         </div>
     </x-slot>
 
-    <div class="p-6 overflow-hidden bg-white rounded-md shadow-md dark:bg-dark-eval-1">
-        <h1 class="font-semibold text-lg uppercase tracking-wide">Welcome {{ Auth::user()->name }}</h1>
-        <p class="prose">You're logged in!</p>
-    </div>
-
-    <div class="divider"></div>
-
     <div class="stats stats-vertical lg:stats-horizontal shadow w-full my-3 dark:bg-dark-eval-1">
         <div class="stat">
           <div class="stat-figure text-primary">
@@ -42,4 +35,90 @@
           <div class="stat-desc">↘︎ 90 (14%)</div>
         </div>
     </div>
+
+    <div class="col-span-2 stats stats-vertical lg:stats-horizontal shadow w-full mb-3 dark:bg-dark-eval-1">
+      <div class="stat">
+        <div class="stat-title font-bold mb-5">Downloads Overview</div>
+        <div class="stat-value w-full h-72 flex justify-center">
+          <canvas id="linechart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div class="dark:bg-dark-eval-1 w-full shadow rounded-lg">
+        <div class="px-6 py-4 text-base-content/60">
+          <div class="font-bold mb-5">Top Countries</div>
+          <div class="flex flex-col gap-2">
+            <div class="bg-base-content/10 hover:bg-base-content/20 cursor-pointer p-2 rounded-md">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2"><span class="fi fi-id rounded-sm"></span> Indonesia</div>
+                <div class="text-sm">200</div>
+              </div>
+            </div>
+            <div class="bg-base-content/10 hover:bg-base-content/20 w-[75%] cursor-pointer p-2 rounded-md">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2"><span class="fi fi-my rounded-sm"></span> Malaysia</div>
+                <div class="text-sm">150</div>
+              </div>
+            </div>
+            <div class="bg-base-content/10 hover:bg-base-content/20 w-[50%] cursor-pointer p-2 rounded-md">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2"><span class="fi fi-ps rounded-sm"></span> Palestine</div>
+                <div class="text-sm">100</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      <div class="dark:bg-dark-eval-1 w-full shadow rounded-lg">
+        <div class="px-6 py-4 text-base-content/60">
+          <div class="font-bold mb-5">Top OS</div>
+          <div class="flex flex-col gap-2">
+            <div class="bg-base-content/10 hover:bg-base-content/20 cursor-pointer p-2 rounded-md">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2">Windows</div>
+                <div class="text-sm">384</div>
+              </div>
+            </div>
+            <div class="bg-base-content/10 hover:bg-base-content/20 w-[32.03%] cursor-pointer p-2 rounded-md">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2">Android</div>
+                <div class="text-sm">123</div>
+              </div>
+            </div>
+            <div class="bg-base-content/10 hover:bg-base-content/20 w-[17.97%] cursor-pointer p-2 rounded-md">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2">iOS</div>
+                <div class="text-sm">79</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+    <script type="module">
+      new Chart(document.getElementById('linechart'), {
+        type: 'line',
+        data: {
+          labels: Array.from({ length: 12 }, (_, i) => new Date(0, i).toLocaleString('default', { month: 'long' })),
+          datasets: [{
+            label: '# of Downloads',
+            data: Array.from({ length: 12 }, () => Array.from({ length: 12 }, () => Math.floor(Math.random() * (100000 - 30000 + 1)) + 30000)),
+            borderColor: "rgba(23, 138, 119)",
+            backgroundColor: "rgba(56, 200, 171, 0.2)",
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+        }
+      });
+    </script>
 </x-app-layout>
