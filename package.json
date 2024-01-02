@@ -22,6 +22,8 @@
     },
     "dependencies": {
         "@tailwindcss/typography": "^0.5.10",
-        "daisyui": "^4.4.19"
+        "chart.js": "^4.4.1",
+        "daisyui": "^4.4.19",
+        "flag-icons": "^7.1.0"
     }
 }
