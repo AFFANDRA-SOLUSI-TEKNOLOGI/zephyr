@@ -108,11 +108,11 @@
           datasets: [{
             label: '# of Downloads',
             data: Array.from({ length: 12 }, () => Array.from({ length: 12 }, () => Math.floor(Math.random() * (100000 - 30000 + 1)) + 30000)),
-            borderColor: "rgba(25, 167, 206, 0.5)",
-            backgroundColor: "rgba(25, 167, 206, 0.5)",
-            borderWidth: 1,
+            borderColor: "rgba(1, 107, 135)",
+            backgroundColor: "rgba(25, 167, 206, 0.2)",
+            borderWidth: 2,
             fill: true,
-            tension: 0.3,
+            tension: 0.3
           }]
         },
         options: {
